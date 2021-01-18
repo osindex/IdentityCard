@@ -67,10 +67,10 @@ $constellation = InfoHelper::identityCard()->constellation($id);
 $star = InfoHelper::identityCard()->star($id);
 
 # 获取星座
-$star = InfoHelper::birthday()->star($birthday);
+$star = InfoHelper::birthday()->star(strtotime($birthday));
 
 # 获取年龄
-$age = InfoHelper::birthday()->age($id);
+$age = InfoHelper::birthday()->age(strtotime($birthday));
 
 # 生成身份证正面
 $front = InfoHelper::identityCard()->createFrontImage(...);
